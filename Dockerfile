@@ -1,10 +1,1 @@
-FROM n8nio/n8n:latest-debian-bookworm
-
-USER root
-
-RUN apt-get update \
- && apt-get install -y ffmpeg \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
-
-USER node
+FROM rxchi1d/n8n-ffmpeg:latest
